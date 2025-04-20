@@ -1,0 +1,2 @@
+ALTER TABLE products
+ADD COLUMN article varchar(50) NOT NULL UNIQUE

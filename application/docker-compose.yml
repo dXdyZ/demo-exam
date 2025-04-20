@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: demo
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Сохранение данных
+    ports:
+      - "5432:5432"  # Проброс порта
+volumes:
+  postgres_data:
